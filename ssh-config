@@ -1,0 +1,28 @@
+### default for all ##
+Host *
+     ForwardAgent no
+     ForwardX11 no
+     ForwardX11Trusted yes
+     User zqyoung
+     Port 22
+     Protocol 2
+     ServerAliveInterval 60
+     ServerAliveCountMax 30
+ 
+## caen server ##
+Host mmd
+     HostName login.engin.umich.edu
+     User zqyoung
+     Compression yes
+
+## Umich GitLab ##
+Host gitlab
+    HostName gitlab.com
+    User git
+    IdentityFile ~/.ssh/zqyoung_rsa
+ 
+## Login AWS Cloud ##
+Host aws.apache
+     HostName 1.2.3.4
+     User wwwdata
+     IdentityFile ~/.ssh/aws.apache.key
